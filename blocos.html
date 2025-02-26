@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftVerso</title>
+    <link rel="shortcut icon" type="image/jpg" href="Imagens/CraftVerso Logo.png"/>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2f6a00;
+            padding: 8px 15px; /* Diminui o padding para encurtar o espaço geral */
+        }
+        
+        .logo img {
+            height: 40px; /* Diminui o tamanho do logo */
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Diminui o espaço entre o input e o botão */
+        }
+        
+        .search-bar input {
+            padding: 8px;
+            font-size: 14px; /* Diminui o tamanho da fonte */
+            border: 2px solid white;
+            border-radius: 5px;
+            width: 180px; /* Diminui a largura da barra de pesquisa */
+            text-align: left;
+            background-color: transparent;
+            color: white;
+        }
+        
+        .search-bar button {
+            background-color: white;
+            border: none;
+            padding: 8px; /* Diminui o padding do botão */
+            cursor: pointer;
+            border-radius: 5px;
+            -webkit-transition: background-color 0.3s;
+            -moz-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
+            transition: background-color 0.3s;
+        }
+        
+        .search-bar button:hover {
+            background-color: #d0d0d0;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            margin-right: 15px; /* Diminui o espaço entre os itens do menu */
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px; /* Diminui o tamanho da fonte */
+        }
+        
+        nav ul li a:hover {
+            color: #00ff00;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 20px;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+        
+        .section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .section a {
+            text-decoration: none;
+            color: #00a400;
+            font-weight: bold;
+        }
+        
+        .section a:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <img src="imagens/19b742faef2774ae03a77a826437d885.jpg" alt="Logo Minecraft" class="logo">
+        <h1>Wiki de Itens do Minecraft</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Pesquisar...">
+            <button id="search-btn" class="search-btn">🔍</button>
+        </div>
+    </header>
+    <main>
+        <section class="items-container">
+            <div class="item-card">
+                <img href="imagens/Dirt.png" alt="Bloco de Terra" class="item-image">
+                <h2 class="item-title">Bloco de Terra</h2>
+                <p class="item-description">Um dos blocos mais comuns do Minecraft.</p>
+            </div>
+            <div class="item-card">
+                <img href="imagens/Forno.png" alt="Forno" class="item-image">
+                <h2 class="item-title">Forno</h2>
+                <p class="item-description">Serve para cozinhar sua comida minerios e outras coisas.</p>
+            </div>
+            <div class="item-card">
+                <img href="imagens/Crafting Table.png" alt="Crafting Table" class="item-image">
+                <h2 class="item-title">Crafting Table</h2>
+                <p class="item-description">Esse objeto serve para criar suas armaduras, espadas, ferramentas e outros objetos com diversas funcionalidades.</p>
+            </div>
+            <div class="item-card">
+                <img href="imagens/images-removebg-preview (4) (1).png" alt="Tabua de Madeira" class="item-image">
+                <h2 class="item-title">Tabua de Madeira</h2>
+                <p class="item-description">Um dos blocos mais usados pelos jogadores, esse é o primeiro bloco que o jogador usa.</p>
+            </div>
+            <div class="item-card">
+                <img href="" alt="" class="item-image">
+                <h2 class="item-title"></h2>
+                <p class="item-description"></p>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('search-btn').addEventListener('click', function() {
+                var query = document.getElementById('search-input').value;
+                if (query) {
+                    window.location.href = 'resultados.html?q=' + encodeURIComponent(query);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

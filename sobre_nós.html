@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CraftVerso</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" type="image/jpg" href="Imagens//Captura de ecrã 2025-02-25 110940.png"/>
+</head>
+<body>
+
+    <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Página Principal</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="equipa.html">Equipa</a></li>
+          <li><a href="sobre_nós.html">Sobre nós</a></li>
+        </ul>
+    </nav>
+
+    <div class=""  style="border: solid ;">
+        <div>
+            
+        </div>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Pesquisar...">
+        <button id="search-btn" class="search-btn">🔍</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('search-btn').addEventListener('click', function() {
+                var query = document.getElementById('search-input').value;
+                if (query) {
+                    window.location.href = 'resultados.html?q=' + encodeURIComponent(query);
+                }
+            });
+            document.getElementById('search-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    var query = document.getElementById('search-input').value;
+                    if (query) {
+                        window.location.href = 'resultados.html?q=' + encodeURIComponent(query);
+                    }
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
